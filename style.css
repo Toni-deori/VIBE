@@ -1,0 +1,75 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1e1e2e;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Container */
+.container {
+    max-width: 500px;
+    background: #2a2a3a;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    margin: 0 auto;
+}
+
+/* Dropdowns */
+select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    background: #3a3a4a;
+    color: white;
+    border: none;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+/* Video Container */
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    border: 3px solid #4a4a6a;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 450px;
+}
+
+video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Buttons */
+button {
+    background: #4a90e2;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    width: 100%;
+}
+
+button:hover {
+    background: #357abd;
+}
+
+/* Status Message */
+.status-message {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #cccccc;
+}

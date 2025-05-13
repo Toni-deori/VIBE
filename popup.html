@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Face Recognition & Voice Navigation</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      width: 500px;
+      height: 600px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .container {
+      width: 100%;
+      text-align: center;
+    }
+
+    .video-container {
+      width: 100%;
+      height: 300px;
+    }
+
+    #chatbox {
+      flex: 1;
+      overflow-y: auto;
+      border: 1px solid #ccc;
+      padding: 5px;
+      background-color: #f9f9f9;
+      display: none;
+      width: 100%;
+      height: 100%;
+      font-family: sans-serif;
+      flex-direction: column;
+    }
+
+    .message {
+      margin: 5px 0;
+      padding: 5px;
+      border-radius: 5px;
+    }
+
+    .user {
+      background-color: #d1e7dd;
+      text-align: right;
+    }
+
+    .system {
+      background-color: #f8d7da;
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Face Recognition & Voice Navigation</h2>
+
+    <div class="video-container">
+      <video id="video" autoplay></video>
+    </div>
+
+    <select id="featureSelect">
+      <option value="" disabled selected>Select a Feature</option>
+      <option value="register">Register Your Face</option>
+      <option value="scan">Scan & Identify</option>
+    </select>
+
+    <div id="conditionDropdown" style="display: none;">
+      <label for="conditionSelect"><h2>Select Condition</h2></label>
+      <select id="conditionSelect">
+        <option value="" disabled selected>Select your condition</option>
+        <option value="Complete Blindness">Complete Blindness</option>
+        <option value="Partial Blindness">Partial Blindness</option>
+        <option value="Blurry Vision">Blurry Vision</option>
+        <option value="Reduced Vision">Reduced Vision</option>
+        <option value="Red-Green Color Blindness">Red-Green Color Blindness</option>
+        <option value="Blue-Yellow Color Blindness">Blue-Yellow Color Blindness</option>
+        <option value="Total Color Blindness">Total Color Blindness</option>
+        <option value="Photophobia">Photophobia (Light Sensitivity)</option>
+      </select>
+    </div>
+
+    <button id="actionButton">Start</button>
+    <p class="status-message" id="status">Choose a feature to begin.</p>
+
+    <div id="chatbox" tabindex="0"></div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
